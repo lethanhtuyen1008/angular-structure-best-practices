@@ -1,8 +1,9 @@
 @import 'assets/variables/variables-dark';
 @import 'assets/variables/variables';
 
-$primary: red;
-$secondary: blue;
+$success: map-get($lightColor, 'success-main');
+$info: map-get($lightColor, 'info-main');
+$warning: map-get($lightColor, 'warning-main');
 
 $colors: (
   'blue': map-get($lightColor, 'blue'),
@@ -18,6 +19,23 @@ $colors: (
   'white': map-get($lightColor, 'white'),
   'black': map-get($lightColor, 'black'),
   'bg-body': map-get($lightColor, 'background-body'),
+  // Success
+  'success-light': map-get($lightColor, 'success-light'),
+  'success-dark': map-get($lightColor, 'success-dark'),
+  'success-text': map-get($lightColor, 'success-text'),
+  // Error
+  'error': map-get($lightColor, 'error-main'),
+  'error-light': map-get($lightColor, 'error-light'),
+  'error-dark': map-get($lightColor, 'error-dark'),
+  'error-text': map-get($lightColor, 'error-text'),
+  // Info
+  'info-light': map-get($lightColor, 'info-light'),
+  'info-dark': map-get($lightColor, 'info-dark'),
+  'info-text': map-get($lightColor, 'info-text'),
+  // Warning
+  'warning-light': map-get($lightColor, 'warning-light'),
+  'warning-dark': map-get($lightColor, 'warning-dark'),
+  'warning-text': map-get($lightColor, 'warning-text'),
 );
 
 // ================================ Overide variable color Bootstrap ==================================================

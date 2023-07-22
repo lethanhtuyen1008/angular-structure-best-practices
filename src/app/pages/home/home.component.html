@@ -2,5 +2,15 @@
 <hr />
 <pre>Rate: <b>{{currentRate}}</b></pre>
 
-<button class="btn btn-primary" (click)="showStandard()">Standard
-    toast</button>
+<button class="btn btn-primary" (click)="show('success')">
+    toast success</button>
+
+<button class="btn btn-primary" (click)="show('error')">
+    toast error</button>
+<button class="btn btn-primary" (click)="show('warning')">
+    toast warning</button>
+<button class="btn btn-primary" (click)="show('info')">
+    toast info</button>
+
+
+<button class="btn btn-secondary" (click)="removeStandard()">Remove</button>

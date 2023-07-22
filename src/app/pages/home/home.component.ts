@@ -1,5 +1,5 @@
 import { ProfilesService } from '@/app/core';
-import { ToastService } from '@/app/shared/components/toast/toast-service';
+import { ToastService, ToastType } from '@/app/shared/components/toast/toast.component.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,7 +16,13 @@ export class HomeComponent implements OnInit {
     this.profilesService.get('tuyenllt');
   }
 
-  showStandard() {
-    this.toastService.show('I am a standard toast');
+  show(type: ToastType) {
+    this.toastService.show('I am a standard toast', {
+      animation: true,
+      type: type,
+    });
+  }
+  removeStandard() {
+    this.toastService.clear();
   }
 }

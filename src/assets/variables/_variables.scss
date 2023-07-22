@@ -7,34 +7,29 @@ $lightColor: (
   // Background Color
   'background-body': #362244,
 
-  //Rgba Color
-  'rgba-grey-200': rgba(255, 0, 0, 0),
-  'rgba-grey-300': rgba(2, 12, 24, 0.4),
-  'rgba-purple-200': rgba(157, 96, 212, 0.5),
-  'rgba-purple-600': rgba(255, 255, 255, 0.1),
-  'rgba-purple-800': rgba(2, 12, 24, 0.2),
-  'rgba-purple-900': rgba(15, 12, 24, 0.2),
-  // Primary Violet
-  'primary-violet-50': #e9d2f9,
-  'primary-violet-200': #cb96f2,
-  'primary-violet-400': #ae5aea,
-  'primary-violet-500': #724fe3,
-  'primary-violet-600': #911ee3,
-  'primary-violet-900': #58118a,
+  //Success Color
+  'success-light': #b9f6ca,
+  'success-main': #05b46a,
+  'success-dark': #00c853,
+  'success-text': #ffffff,
 
-  // Primary Indigo
-  'primary-indigo-200': #b19eef,
-  'primary-indigo-300': #9c84eb,
-  'primary-indigo-500': #724fe3,
-  'primary-indigo-600': #5d34df,
-  'primary-indigo-800': #3e1ab4,
-  'primary-indigo-900': #30148e,
+  //Error Color
+  'error-light': #ffe1df,
+  'error-main': #f44336,
+  'error-dark': #f27269,
+  'error-text': #ffffff,
 
-  // Error color
-  'semantic-error': #eb0000,
-  // Aqua Color
-  'aqua-500': #00dcfa,
-  'aqua-900': #00515c,
+  // Info Color
+  'info-light': #86b4b4,
+  'info-main': #68bbb9,
+  'info-dark': #539594,
+  'info-text': #ffffff,
+
+  // Warning Color
+  'warning-light': #ecc550,
+  'warning-main': #e5ad06,
+  'warning-dark': #a58938,
+  'warning-text': #ffffff,
 
   // Grey Color
   'grey50': #fafafa,
