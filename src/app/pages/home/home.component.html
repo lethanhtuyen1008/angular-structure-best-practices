@@ -1,16 +1,20 @@
-<ngb-rating [(rate)]="currentRate"></ngb-rating>
-<hr />
-<pre>Rate: <b>{{currentRate}}</b></pre>
+<div class="d-flex gap-2 flex-wrap">
+    <button class="btn btn-primary" (click)="show('success')">
+        toast success</button>
 
-<button class="btn btn-primary" (click)="show('success')">
-    toast success</button>
+    <button class="btn btn-primary" (click)="show('error')">
+        toast error</button>
+    <button class="btn btn-primary" (click)="show('warning')">
+        toast warning</button>
+    <button class="btn btn-primary" (click)="show('info')">
+        toast info</button>
+    <button class="btn btn-secondary" (click)="removeStandard()">Remove</button>
+</div>
 
-<button class="btn btn-primary" (click)="show('error')">
-    toast error</button>
-<button class="btn btn-primary" (click)="show('warning')">
-    toast warning</button>
-<button class="btn btn-primary" (click)="show('info')">
-    toast info</button>
 
-
-<button class="btn btn-secondary" (click)="removeStandard()">Remove</button>
+<h1>Display text</h1>
+<h2>Display text</h2>
+<h3>Display text</h3>
+<h4>Display text</h4>
+<h5>Display text</h5>
+<h6>Display text</h6>
