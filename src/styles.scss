@@ -1,4 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/variables/variables-dark';
+@import 'assets/variables/variables';
 
-/* Importing Bootstrap SCSS file. */
+$primary: red;
+$secondary: blue;
+
+$colors: (
+  'blue': map-get($lightColor, 'blue'),
+  'indigo': map-get($lightColor, 'indigo'),
+  'purple': map-get($lightColor, 'purple'),
+  'pink': map-get($lightColor, 'pink'),
+  'red': map-get($lightColor, 'red'),
+  'orange': map-get($lightColor, 'orange'),
+  'yellow': map-get($lightColor, 'yellow'),
+  'green': map-get($lightColor, 'green'),
+  'teal': map-get($lightColor, 'teal'),
+  'cyan': map-get($lightColor, 'cyan'),
+  'white': map-get($lightColor, 'white'),
+  'black': map-get($lightColor, 'black'),
+  'bg-body': map-get($lightColor, 'background-body'),
+);
+
+// ================================ Overide variable color Bootstrap ==================================================
 @import 'bootstrap/scss/bootstrap';
+// Required
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+
+@import 'bootstrap/scss/type';
+// @import "bootstrap/scss/images";
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+// @import "bootstrap/scss/button-group";
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar'; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import 'bootstrap/scss/close';
+// @import "bootstrap/scss/toasts";
+@import 'bootstrap/scss/modal'; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+// @import "bootstrap/scss/spinners";
+@import 'bootstrap/scss/offcanvas'; // Requires transitions
+@import 'bootstrap/scss/placeholders';
+
+// Helpers
+// @import "bootstrap/scss/helpers";
+
+// Utilities
+@import 'bootstrap/scss/utilities/api';
