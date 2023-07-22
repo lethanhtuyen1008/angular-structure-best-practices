@@ -22,10 +22,14 @@ export class HomeComponent implements OnInit {
   }
 
   show(type: ToastType) {
-    this.toastService.show('I am a standard toast', {
-      animation: true,
-      type: type,
-    });
+    this.toastService.show(
+      'MUI offers a comprehensive suite of UI tools to help you ship new features faster.',
+      {
+        animation: true,
+        type: type,
+        delay: 15000000000000,
+      },
+    );
   }
   removeStandard() {
     this.toastService.clear();
