@@ -1,4 +1,5 @@
 import { ProfilesService } from '@/app/core';
+import { LoadingService } from '@/app/shared/components/backdrop/loading-backdrop.component.service';
 import { ToastService, ToastType } from '@/app/shared/components/toast/toast.component.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   currentRate = 8;
 
-  constructor(private profilesService: ProfilesService, public toastService: ToastService) {}
+  constructor(
+    private profilesService: ProfilesService,
+    public toastService: ToastService,
+    private loadingService: LoadingService,
+  ) {}
 
   ngOnInit() {
     this.profilesService.get('tuyenllt');
@@ -24,5 +29,9 @@ export class HomeComponent implements OnInit {
   }
   removeStandard() {
     this.toastService.clear();
+  }
+
+  showLoading() {
+    this.loadingService.show();
   }
 }

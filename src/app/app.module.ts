@@ -8,11 +8,13 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './pages/home/home.module';
 import { AuthModule } from './auth/auth.module';
 import { ToastsComponent } from './shared/components/toast/toasts.component';
+import { LoadingBackdropComponent } from './shared/components/backdrop/loading-backdrop.component';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent],
   imports: [
     BrowserModule,
+    LoadingBackdropComponent,
     ToastsComponent,
     CoreModule,
     SharedModule,

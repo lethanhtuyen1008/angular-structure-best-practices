@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from './core';
+import { LoadingService } from './shared/components/backdrop/loading-backdrop.component.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  constructor(private userService: UserService) {}
+  private loadingSubscription: Subscription | any;
+  isLoading: boolean = false;
 
-  ngOnInit() {
-    this.userService.populate();
+  constructor(private loadingService: LoadingService) {
+    this.loadingSubscription = this.loadingService
+      .getIsLoading()
+      .subscribe((isLoading: boolean) => {
+        this.isLoading = isLoading;
+      });
+  }
+
+  ngOnInit() {}
+
+  ngOnDestroy() {
+    this.loadingSubscription.unsubscribe();
   }
 }
