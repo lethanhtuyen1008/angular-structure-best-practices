@@ -12,6 +12,7 @@ css/build
 .AppleDouble
 .LSOverride
 .angular
+dist
 
 # Icon must end with two \r
 Icon

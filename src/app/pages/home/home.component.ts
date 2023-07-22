@@ -1,5 +1,5 @@
+import { ProfilesService } from '@/app/core';
 import { Component, OnInit } from '@angular/core';
-import { ProfilesService } from '../core';
 
 @Component({
   selector: 'app-home-page',
@@ -7,10 +7,9 @@ import { ProfilesService } from '../core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private profilesService: ProfilesService) {}
+  currentRate = 8;
 
-  tags: Array<string> = [];
-  tagsLoaded = false;
+  constructor(private profilesService: ProfilesService) {}
 
   ngOnInit() {
     this.profilesService.get('tuyenllt').subscribe(() => {});
