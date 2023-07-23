@@ -32,8 +32,7 @@ export class HttpTokenInterceptor implements HttpInterceptor {
     // Thêm phần kiểm tra token hết hạn và gọi API refresh token
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        // if (error.status === 401 && !req.url.endsWith('/refresh_token')) {
-        if (error.status === 404) {
+        if (error.status === 401 && !req.url.endsWith('/refresh_token')) {
           // Kiểm tra xem có lỗi 401 (Unauthorized) và không phải API refresh token
           const refreshToken = this.jwtService.getRefreshToken();
 
@@ -60,14 +59,14 @@ export class HttpTokenInterceptor implements HttpInterceptor {
 
                 // Nếu không muốn tiếp tục gửi yêu cầu, có thể throw error hoặc trả về một Observable error
                 return throwError(refreshError);
-              })
+              }),
             );
           }
         }
 
         // Nếu không phải lỗi 401 hoặc không có refresh token, tiếp tục trả về lỗi ban đầu
         return throwError(error);
-      })
+      }),
     );
   }
 }

@@ -1,7 +1,8 @@
-import { ProfilesService } from '@/app/core';
 import { LoadingService } from '@/app/shared/components/backdrop/loading-backdrop.component.service';
 import { ToastService, ToastType } from '@/app/shared/components/toast/toast.component.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-home-page',
@@ -9,16 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  currentRate = 8;
-
   constructor(
-    private profilesService: ProfilesService,
     public toastService: ToastService,
     private loadingService: LoadingService,
+    private activatedRoute: ActivatedRoute,
   ) {}
 
-  ngOnInit() {
-    this.profilesService.get('tuyenllt');
+  async ngOnInit() {
+    const data = await firstValueFrom(this.activatedRoute.data);
+    console.log(data);
   }
 
   show(type: ToastType) {
@@ -31,7 +31,8 @@ export class HomeComponent implements OnInit {
       },
     );
   }
-  removeStandard() {
+
+  remove() {
     this.toastService.clear();
   }
 

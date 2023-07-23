@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 
-import { ApiService, JwtService, ProfilesService, UserService } from './services';
+import { ApiService, JwtService, ProductService, ProfilesService, UserService } from './services';
 
 @NgModule({
   imports: [CommonModule],
@@ -13,6 +13,7 @@ import { ApiService, JwtService, ProfilesService, UserService } from './services
     JwtService,
     ProfilesService,
     UserService,
+    ProductService,
   ],
   declarations: [],
 })
